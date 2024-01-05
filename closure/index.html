@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <h5>
+      해당 파일을 라이브 서버로 켜보세요 <br />
+      개발자 도구의 소스탭으로 이동해서 중단점을 찍고 넘겨가며 스크립트의 func을
+      관찰해보세요<br />
+      클로저를 눈으로 확인할 수 있습니다.<br />
+    </h5>
+  </body>
+  <script>
+    function outerFunc() {
+      let a = 0;
+
+      function innerFunc() {
+        return ++a;
+      }
+
+      return innerFunc;
+    }
+
+    const func = outerFunc();
+
+    func();
+    func();
+  </script>
+</html>
