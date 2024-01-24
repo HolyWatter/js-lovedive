@@ -1,0 +1,25 @@
+<script>
+  // 다음 콘솔로그의 순서를 맞춰보세요
+  // quiz 1
+  console.log("시작");
+
+  setTimeout(function () {
+    console.log("타임아웃");
+  }, 0);
+
+  Promise.resolve().then(() => console.log("프로미스"));
+
+  console.log("끝");
+
+  // quiz 2
+
+  console.log("시작");
+
+  Promise(() => console.log("프로미스"));
+
+  setTimeout(function () {
+    console.log("타임아웃");
+  }, 0);
+
+  console.log("끝");
+</script>
